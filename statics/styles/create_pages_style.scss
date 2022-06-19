@@ -1,0 +1,59 @@
+@import "definition";
+
+.menu{
+    &--action{
+        font-size: 0.95rem;
+        font-weight: 200;
+        padding: 0 8px;
+        height: 45px;
+        margin-right: 32px;
+        border-radius: 4px;
+        box-shadow: none;
+        &__correct{
+            background-color: $back_color_correct;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+        &__denger{
+            background-color: $back_color_denger ;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+
+    
+    }
+
+    &--selectproject{
+        &__text {
+            color:$text_color;
+        }
+
+        &__detailtext{
+            color:$text_color;
+        }
+        & thead > tr {
+            height: 1.8rem;
+        }
+        & tbody > tr {
+            height: 1.5rem;
+        }
+    }
+
+    &--note{
+        color:$text_color;
+        font-size: 0.8rem;
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    &--textbox{
+        width: 400px;
+    }
+
+    &--area{
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+}

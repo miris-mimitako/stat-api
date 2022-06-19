@@ -1,0 +1,59 @@
+.menu--action {
+  font-size: 0.95rem;
+  font-weight: 200;
+  padding: 0 8px;
+  height: 45px;
+  margin-right: 32px;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.menu--action__correct {
+  background-color: #b3b3f7;
+}
+
+.menu--action__correct:hover {
+  opacity: 0.7;
+}
+
+.menu--action__denger {
+  background-color: #fdb5b5;
+}
+
+.menu--action__denger:hover {
+  opacity: 0.7;
+}
+
+.menu--selectproject__text {
+  color: #636363;
+}
+
+.menu--selectproject__detailtext {
+  color: #636363;
+}
+
+.menu--selectproject thead > tr {
+  height: 1.8rem;
+}
+
+.menu--selectproject tbody > tr {
+  height: 1.5rem;
+}
+
+.menu--note {
+  color: #636363;
+  font-size: 0.8rem;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.menu--textbox {
+  width: 400px;
+}
+
+.menu--area {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+/*# sourceMappingURL=create_pages_style.css.map */

@@ -1,0 +1,123 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h2, h3, h4 {
+  margin: 1.25rem 0;
+}
+
+p {
+  margin: 1.05rem 0;
+  text-overflow: wrap;
+}
+
+body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 1%;
+  font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+  min-height: 100%;
+  position: relative;
+}
+
+header {
+  margin: 0 0 20px 0;
+  text-align: center;
+  background-color: #dbeaf5;
+  padding: 1.1rem 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.main {
+  min-height: calc(100vh - 50px - 4.2rem);
+}
+
+.header--title {
+  font-size: 2rem;
+}
+
+.header--title__image {
+  height: 32px;
+}
+
+.menu--link {
+  font-size: 1.2rem;
+  color: #4c4aca;
+  text-decoration: none;
+}
+
+.menu--text {
+  font-size: 1.5rem;
+  color: #636363;
+}
+
+.menu--wrapper {
+  padding-left: 1rem;
+}
+
+.footer--text {
+  color: #636363;
+  font-size: 0.8rem;
+}
+
+.footer--link {
+  color: #636363;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=base_style.css.map */
