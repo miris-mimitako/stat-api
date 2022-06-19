@@ -21,6 +21,24 @@
                 opacity: 0.7;
             }
         }
+
+    
+    }
+
+    &--selectproject{
+        &__text {
+            color:$text_color;
+        }
+
+        &__detailtext{
+            color:$text_color;
+        }
+        & thead > tr {
+            height: 1.8rem;
+        }
+        & tbody > tr {
+            height: 1.5rem;
+        }
     }
 
     &--note{
