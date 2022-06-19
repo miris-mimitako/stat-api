@@ -106,6 +106,10 @@ footer {
   color: #636363;
 }
 
+.menu--wrapper {
+  padding-left: 1rem;
+}
+
 .footer--text {
   color: #636363;
   font-size: 0.8rem;
