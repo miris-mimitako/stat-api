@@ -13,6 +13,7 @@ import os
 import pathlib
 import re
 import json
+import shutil
 
 app = FastAPI(
     title='Miris Mimitako static API',
@@ -92,11 +93,16 @@ async def analysis_create(analysis_data:Analysis):
         analysis_data.analysis_title = re.sub(r'[\\/:*?"<>|]+', "-", analysis_data.analysis_title)
     
     mk_dir = os.path.join(file_path,"project", analysis_data.project_title, analysis_data.analysis_title)
+    mk_dir_tmp = os.path.join(mk_dir,"tmp")
+    origin_dir = os.path.join(file_path, "statics/template/test_origin.html")
+
     print(mk_dir)
     if os.path.isdir(mk_dir):
         return {"result": "Analysis is already exist."}
     else:
         os.makedirs(mk_dir)
+        os.makedirs(mk_dir_tmp)
+        shutil.copy(origin_dir, os.path.join(mk_dir_tmp, analysis_data.analysis_title +".html"))
         project_settings[analysis_data.project_title].append(analysis_data.analysis_title)
         print(analysis_data.project_title)
         with open(project_settings_file_path, encoding="utf-8", mode="w") as outfile:
