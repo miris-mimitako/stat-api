@@ -78,3 +78,27 @@ async def project_list():
 
     print(project_settings["project"])
     return {"project_list": project_settings["project"]}
+
+class Analysis(BaseModel):
+    project_title:str
+    analysis_title:str
+
+@app.post("/analysis_create")
+async def analysis_create(analysis_data:Analysis):
+    # Judge empty data
+    if analysis_data.analysis_title == False:
+        return {"result":"You should input text"}
+    else:
+        analysis_data.analysis_title = re.sub(r'[\\/:*?"<>|]+', "-", analysis_data.analysis_title)
+    
+    mk_dir = os.path.join(file_path,"project", analysis_data.project_title, analysis_data.analysis_title)
+    print(mk_dir)
+    if os.path.isdir(mk_dir):
+        return {"result": "Analysis is already exist."}
+    else:
+        os.makedirs(mk_dir)
+        project_settings[analysis_data.project_title].append(analysis_data.analysis_title)
+        print(analysis_data.project_title)
+        with open(project_settings_file_path, encoding="utf-8", mode="w") as outfile:
+            json.dump(project_settings, outfile, indent=4)
+        return {"result": "Success! make analysis."}
